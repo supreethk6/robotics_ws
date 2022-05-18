@@ -31,3 +31,6 @@
 *.out
 *.app
 pgm_output
+
+# VS code
+.vscode
