@@ -17,19 +17,18 @@ tuple<double, double> state_prediction(double mean1, double var1, double mean2, 
 }
 int main()
 {
-    //Measurements and measurement variance
+    // Measurements and measurement variance
     double measurements[5] = { 5, 6, 7, 9, 10 };
     double measurement_sig = 4;
-    //Motions and motion variance
+    // Motions and motion variance
     double motion[5] = { 1, 1, 2, 1, 1 };
     double motion_sig = 2;
-    //Initial state
+    // Initial state
     double mu = 0;
     double sig = 1000;
-    //######TODO: Put your code here below this line######//
     // Loop through all the measurments
-        // Apply a measurment update
         for(int i = 0; i < sizeof(measurements) / sizeof(measurements[0]); i++){
+          // Apply a measurment update
           tie(mu, sig) = measurement_update(mu, sig, measurements[i], measurement_sig);
           printf("update %d:  [%f, %f]\n", i, mu, sig);
           // Apply a state prediction
