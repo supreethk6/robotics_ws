@@ -34,3 +34,7 @@ pgm_output
 
 # VS code
 .vscode
+.catkin_tools
+build
+devel
+logs
